@@ -40,7 +40,7 @@ app.post('/api/v0/user', async (req, res) => {
     req.send(user)
 })
 
-app.post('/api/v0/user/all', async (req, res) => {
+app.get('/api/v0/user/all', async (req, res) => {
     const users = await Model$.find()
     req.send(users)
 })
