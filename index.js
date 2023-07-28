@@ -1,8 +1,14 @@
-// Add Express
+const cors = require('cors')
+const dotenv = require('dotenv')
 const express = require("express");
-// Initialize Express
 const app = express();
-// Create GET request
+
+dotenv.config()
+const port = process.env.PORT
+
+app.use(cors())
+app.use(express.json())
+
 app.get("/", (req, res) => {
     res.send("Express on Vercel");
 });
@@ -17,8 +23,8 @@ app.get("/api/v0", (req, res) => {
 
 
 // Initialize server
-app.listen(5000, () => {
-    console.log("Running on port 5000.");
+app.listen(port, () => {
+    console.log("Running on port .", port);
 });
 
 
