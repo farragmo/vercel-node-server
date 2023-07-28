@@ -35,6 +35,7 @@ app.get("/api/v0", (req, res) => {
 });
 
 //
+/*
 app.post('/api/v0/user', async (req, res) => {
     const user = await (await Model$.create(req.body)).save()
     req.send(user)
@@ -43,7 +44,7 @@ app.post('/api/v0/user', async (req, res) => {
 app.get('/api/v0/user/all', async (req, res) => {
     const users = await Model$.find()
     req.send(users)
-})
+})*/
 
 // Initialize server
 app.listen(port, () => {
